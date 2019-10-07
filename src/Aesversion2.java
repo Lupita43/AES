@@ -79,16 +79,23 @@ public class Aesversion2 {
 		
 		for (int x = 0; x <4; x++) {	
 	        for (int y = 0; y < 4; y++) {
-	           XOR[x][y]=(byte) (Mtexto[x][y] ^ Mclave[x][y]);
+	           XOR[y][x]=(byte) (Mtexto[x][y] ^ Mclave[x][y]);
 	        }
 	       
 	    }
-		
+		System.out.println("\nOPERACION XOR");
 		for (int x = 0; x <4; x++) {	
 	        for (int y = 0; y < 4; y++) {
 	           System.out.print("|"+XOR[x][y]);
 	        }
 	        System.out.println("|");
+	    }
+		System.out.println("\nOPERACION XOR");
+		for (int x = 0; x <4; x++) {	
+	        for (int y = 0; y < 4; y++) {
+	        	 System.out.print(String.format("0x%h",XOR[y][x])+"|");
+	        }
+	        System.out.println("");
 	    }
 		
 		
